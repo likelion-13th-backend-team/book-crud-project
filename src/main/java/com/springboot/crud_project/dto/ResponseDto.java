@@ -1,11 +1,10 @@
 package com.springboot.crud_project.dto;
 
+import lombok.Getter;
+import lombok.Setter;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-@AllArgsConstructor
+@Setter
+@Getter
 public class ResponseDto {
     private Long id;
     private String title;
@@ -13,43 +12,16 @@ public class ResponseDto {
     private String publisher;
     private String category;
 
-    public Long getId() {
-        return id;
+    // 기본 생성자
+    public ResponseDto() {
     }
 
-    public void setId(Long id) {
+    // 모든 필드를 인자로 받는 생성자
+    public ResponseDto(Long id, String title, String author, String publisher, String category) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public String getPublisher() {
-        return publisher;
-    }
-
-    public void setPublisher(String publisher) {
         this.publisher = publisher;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
         this.category = category;
     }
 
